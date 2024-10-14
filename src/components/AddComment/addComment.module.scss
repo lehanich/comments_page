@@ -1,0 +1,41 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+
+  &__input {
+    background-color: transparent;
+    border: 0;
+    color: var(--color-primary);
+  }
+
+  &__button {
+    /* Frame 48095994 */
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 40px;
+    gap: 10px;
+
+    width: 85px;
+    height: 52px;
+
+    background: linear-gradient(90deg, #161A31 3.4%, #06091F 100%);
+    border-radius: 14px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+  }
+}
+
+.answer {
+  padding: 0;
+  margin-left: 70px;
+}

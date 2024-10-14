@@ -1,0 +1,166 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+$font: "Inter";
+$presets: (
+  h1: (
+    xss: createPreset(28px, 700, 36px, normal),
+    xs: createPreset(32px, 700, 40px, normal),
+    lg: createPreset(48px, 700, 48px, normal),
+  ),
+  h2: (
+    xss: createPreset(24px, 600, 32px, normal),
+    lg: createPreset(40px, 600, 46px, normal),
+  ),
+  h3: (
+    xss: createPreset(18px, 600, 26px, normal),
+    md: createPreset(22px, 600, 30px, normal),
+    lg: createPreset(26px, 600, 34px, normal),
+  ),
+  h4: (
+    xss: createPreset(18px, 600, 26px, normal),
+    md: createPreset(20px, 600, 28px, normal),
+    lg: createPreset(24px, 600, 32px, normal),
+  ),
+  h5: (
+    xss: createPreset(18px, 500, 28px, normal),
+    md: createPreset(18px, 500, 28px, normal),
+    lg: createPreset(18px, 500, 28px, normal),
+  ),
+  h6: (
+    xss: createPreset(18px, 500, 28px, normal),
+    md: createPreset(18px, 500, 28px, normal),
+    lg: createPreset(18px, 500, 28px, normal),
+  ),
+  subtitle1: (
+    xss: createPreset(16px, 500, 24px, normal),
+    md: createPreset(20px, 500, 28px, normal),
+  ),
+  paragraph1: (
+    xss: createPreset(0.75rem, 400, 22px, normal),
+    sm: createPreset(0.875rem, 400, 24px, normal),
+  ),
+);
+
+$text-size: (
+  sm: (
+    font-size: 0.875rem,
+    line-height: 1.25rem,
+  ),
+  9xl: (
+    font-size: 8rem,
+    line-height: 1,
+  ),
+  2xl: (
+    font-size: 1.5rem,
+    line-height: 2rem,
+  ),
+  xl: (
+    font-size: 1.25rem,
+    line-height: 1.75rem,
+  ),
+  5xl: (
+    font-size: 3rem,
+    line-height: 1,
+  ),
+  3xl: (
+    font-size: 1.875rem,
+    line-height: 2.25rem,
+  ),
+  base: (
+    font-size: 1rem,
+    line-height: 1.5rem,
+  ),
+  lg: (
+    font-size: 1.125rem,
+    line-height: 1.75rem,
+  ),
+  xs: (
+    font-size: 0.75rem,
+    line-height: 1rem,
+  ),
+  \[0\.813rem\]: (
+    font-size: 0.813rem,
+  ),
+  // .\!text-sm: (
+  //   font-size: 0.875rem !important;
+  //   line-height: 1.25rem !important;
+  // ),
+  4xl: (
+    font-size: 2.25rem,
+    line-height: 2.5rem,
+  ),
+  \[3px\]: (
+    font-size: 3px,
+  ),
+  \[10px\]: (
+    font-size: 10px,
+  ),
+  // .\!text-lg: (
+  //   font-size: 1.125rem !important;
+  //   line-height: 1.75rem !important;
+  // ),
+  \[8px\]: (
+    font-size: 8px,
+  ),
+  \[13px\]: (
+    font-size: 13px,
+  ),
+  \[0\.35rem\]: (
+    font-size: 0.35rem,
+  ),
+  \[12px\]: (
+    font-size: 12px,
+  ),
+  \[0\.44em\]: (
+    font-size: 0.44em,
+  ),
+  \[7px\]: (
+    font-size: 7px,
+  ),
+  \[0\.75rem\]: (
+    font-size: 0.75rem,
+  ),
+);
+
+
+$text-weight: (
+  bold: 700,
+  medium: 500,
+  semibold: 600,
+  normal: 400,
+  // .\!font-normal{
+  //   font-weight: 400 !important;
+  // }
+  light: 300,
+);
+
+@each $preset-name, $preset-sizes in $presets {
+  .t-#{$preset-name} {
+    @each $breakpoint-name, $props in $preset-sizes {
+      @include breakpoint($breakpoint-name) {
+        @include applyPreset($props);
+      }
+    }
+  }
+}
+
+@each $color-name, $color-value in $colors {
+  .c-#{$color-name} {
+    color: $color-value;
+  }
+}
+
+@each $size-name, $size-value in $text-size {
+  .text-#{$size-name} {
+    @each $value-name, $value-value in $size-value {
+      #{$value-name}: $value-value;
+    }
+  }
+}
+
+@each $wigth-name, $wigth-value in $text-weight {
+  .text-#{$wigth-name} {
+    font-weight: $wigth-value;
+  }
+}

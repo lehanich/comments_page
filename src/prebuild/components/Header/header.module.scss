@@ -1,0 +1,13 @@
+@import "../../../../src/prebuild/scss/variables";
+@import "../../../../src/prebuild/scss/mixins";
+
+.root {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: auto;
+  height: 100%;
+  margin-left: 5rem;
+  // padding: 5rem 0;
+}

@@ -1,0 +1,51 @@
+.root {
+
+  &__label_block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 0.5rem;
+  }
+
+  & .text_sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  &__input_block {
+    position: relative;
+
+    & input {
+
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+
+      width: 100%;
+
+      display: block;
+    }
+  }
+
+  &__input_border {
+    & input {
+      --tw-border-opacity: 1;
+      border-color: rgb(226 232 240 / var(--tw-border-opacity));
+
+      border-radius: 0.25rem;
+    }
+  }
+
+  &__input_noborder {
+    & input {
+      border-width: 0px;
+      margin: 0px;
+    }
+  }
+}

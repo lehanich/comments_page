@@ -1,0 +1,126 @@
+@import "../../../../src/prebuild/scss/variables";
+@import "../../../../src/prebuild/scss/mixins";
+
+.root {
+  display: flex;
+  flex-direction: column;
+
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  // height: 100%;
+
+  &__header {
+    height: 200px;
+    justify-content: center;
+  }
+  &__bg {
+    // &::before {
+      content: "";
+      opacity: 1;
+      width: 100%;
+      height: auto;
+      background-image: url("../../assets/imgs/bg-page.jpg"); // var(--bg-base1); // url("../assets/forest1.png"); // 
+      // background-image: -webkit-image-set(
+      //   var(--bg-webp) 1x,
+      //   var(--bg-png) 1x,
+      //   var(--bg-jpeg) 1x
+      // );
+      // background-image: image-set(
+      //   var(--bg-webp) type("image/webp") 1x,
+      //   var(--bg-png) type("image/png") 1x,
+      //   var(--bg-jpeg) type("image/jpeg") 1x
+      // );
+      background-color: var(--body-bg);
+      background-size: cover;
+      /* old */
+      background-repeat: round;
+  
+      /* new */
+      background-repeat: no-repeat;
+      background-position: center;
+  
+      // position: absolute;
+      // z-index: 0;
+    // }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__main {
+    @include container();
+  }
+
+  // animation: fadeIn 0.15s ease-in-out forwards;
+
+  // &.has_header {
+  //   padding-top: 76px;
+  // }
+
+  // &__main {
+
+  // }
+
+  @include breakpoint("xs") {
+    & {
+      margin-left: 0px;
+    }
+    &__main {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  @include breakpoint("md") {
+    & {
+      margin-left: 0px;
+    }
+    &__main {
+      padding-left: 1.75rem;
+      padding-right: 1.75rem;
+    }
+  }
+
+  @include breakpoint("lg") {
+
+
+  }
+
+  // @include breakpoint("lg") {
+  //   :global([dir="ltr"]) & {
+  //     margin-left: 16rem;
+  //   }
+  // }
+  // &__responsiveOverlay {
+  //   visibility: hidden;
+  //   position: fixed;
+  //   top: 0px;
+  //   right: 0px;
+  //   bottom: 0px;
+  //   left: 0px;
+  //   z-index: 49;
+  //   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  //   --tw-bg-opacity: 0;
+  //   transition-property: all;
+  //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  //   transition-duration: 100ms;
+    
+  //   &_active {
+  //     visibility: visible;
+  //     --tw-bg-opacity: 0.5;
+  //   }
+  // }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

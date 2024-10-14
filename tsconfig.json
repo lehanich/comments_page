@@ -1,0 +1,48 @@
+{
+    "ts-node": {
+        // Do not forget to `npm i -D tsconfig-paths`
+        "require": ["tsconfig-paths/register"]
+    },
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "es2022", //"es6",
+        "target": "es2022",
+        // "jsx": "react-jsx",
+        "jsx": "react-jsx",
+        // "jsxFactory": "App",
+        // "jsxFragmentFactory": "Fragment",
+        "allowJs": true,
+        "moduleResolution": "node",
+
+        "removeComments": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "plugins": [
+            {
+              "name": "typescript-plugin-css-modules"
+            }
+        ],
+        "rootDir": "./src/",
+        "baseUrl": "./",
+        "paths": {
+            "@app/*": ["src/app/*"],
+            "@core/*": ["src/core/*"],
+            "@src/*": ["src/*"],
+            "@components/*": ["src/components/*"],
+            "@hooks/*": ["src/hooks/*"],
+            "@pages/*": ["src/pages/*"],
+            "@layouts/*": ["src/layouts/*"],
+            "@prebuild/*": ["src/prebuild/*"],
+        }
+    },
+    "include": [
+        "src", "typings.d.ts"
+    ],
+    "exclude": [
+        "dist",
+        "node_modules",
+        "package.json"
+    ]
+}

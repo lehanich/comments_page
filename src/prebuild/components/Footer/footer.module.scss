@@ -1,0 +1,40 @@
+@import "../../../../src/prebuild/scss/variables";
+@import "../../../../src/prebuild/scss/mixins";
+
+.root {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  margin-top: auto;
+  // border-top-width: 1px;
+  // --tw-bg-opacity: 1;
+  color: var(--color-grey-1);
+  
+  &__content {
+    // @include container();
+
+    text-align: center;
+    width: auto;
+    height: 100%;
+    margin-left: 5rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    & > * {
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

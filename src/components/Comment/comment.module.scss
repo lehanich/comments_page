@@ -1,0 +1,45 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+
+  &__avatar {
+  }
+
+  &__content {
+    display: flex;
+    width: calc(100% - 65px);
+    margin-left: 15px;
+    flex-direction: column;
+
+    color: var(--color-grey-2);
+  }
+  
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: flex-end;
+
+    &_item {
+      margin-left: 5px;
+
+      &_text{
+        padding: 0 5px;
+      }
+    }
+  }
+
+}
+
+.like_active {
+  color: #fff;
+}

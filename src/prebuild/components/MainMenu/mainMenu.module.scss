@@ -1,0 +1,107 @@
+@import "../../../../src/prebuild/scss/variables";
+@import "../../../../src/prebuild/scss/mixins";
+
+.root {
+  display: flex;
+  box-sizing: border-box;
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  font-size: 1rem;
+
+  background-color: rgb(var(--menu-background-color) / 1);
+  border: 1px solid rgb(var(--menu-border-color) / 1);
+  border-radius: 0.8rem;
+
+  &__slide {
+
+  }
+
+  &__slide_category {
+    position: relative;
+    white-space: nowrap;
+    padding: 0.25rem;
+    padding-top: 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgb(var(--menu-prime-color) / 1);
+
+    &:first-child {
+      padding-top: 0px;
+    }
+    :global([data-menu-styles=dark]) & {
+      --tw-text-opacity: 1;
+      color: rgb(100 116 139 / var(--tw-text-opacity));
+    }
+  }
+
+  & li {
+    position: relative;
+    line-height: 3.2rem;
+  }
+  &__item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    column-gap: 0.75rem;
+    border-radius: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-weight: 400;
+    color: rgb(var(--menu-prime-color));
+
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:visited {
+      color: rgb(var(--menu-prime-color));
+    }
+    &:hover {
+      color: rgb(var(--menu-active-color));
+    }
+  }
+
+  &__icon {
+
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    line-height: 1;
+
+  }
+  &__name {
+    font-weight: 500;
+  }
+
+}
+
+.container {
+  @include breakpoint("xs") {
+    &__main {
+      // padding-left: 1.75rem;
+      // padding-right: 1.75rem;
+    }
+  }
+}
+
+:global(a.active) {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    left: calc(50% - 7px/2 + 6px);
+    top: 49px;
+    border-radius: 20px;
+    /* Modern/White-900 */
+    background: #FFFFFF;
+  }
+} 

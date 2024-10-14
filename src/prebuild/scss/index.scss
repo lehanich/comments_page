@@ -1,0 +1,100 @@
+@import "./typography.scss";
+@import "./fonts.scss";
+@import "./reset.scss";
+// date picker
+// @import '../../../node_modules/react-date-range/dist/styles.css'; // main css file
+// @import '../../../node_modules/react-date-range/dist/theme/default.css'; // theme css file
+
+body, html, #root {
+  background-color: rgb(var(--body-bg));
+  font-family: Inter, sans-serif;
+  font-size: 16px; /*14px; /*0.875rem;*/
+  line-height: 1.25rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity));
+}
+
+.dark body{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+::-webkit-scrollbar{
+  height: 5px;
+  width: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+.dark ::-webkit-scrollbar{
+  background-color: rgb(0 0 0 / 0.2);
+}
+::-webkit-scrollbar-thumb{
+  height: 2px;
+  width: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+.dark ::-webkit-scrollbar-thumb{
+  background-color: rgb(0 0 0 / 0.2);
+}
+
+// #app {
+//   display: flex;
+//   height: auto;
+//   align-items: center;
+//   justify-content: center;
+// }
+#app {
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.shadow-sm {
+  --tw-shadow: 0 1px 3px 0 rgba(15,23,42,0.07), 0 1px 2px 0 rgba(15,23,42,0.03);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.hidden{
+  display: none;
+}
+.visible{
+  visibility: visible;
+}
+.\!visible{
+  visibility: visible !important;
+}
+.invisible{
+  visibility: hidden;
+}
+.static{
+  position: static;
+}
+.fixed{
+  position: fixed;
+}
+.absolute{
+  position: absolute;
+}
+.relative{
+  position: relative;
+}
+.\!relative{
+  position: relative !important;
+}
+.sticky{
+  position: sticky;
+}
+.inset-0{
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+@import "./presets.scss";
+@import "./animations";
+@import "./grid-flex-presets.scss";
+// @import "../assets/fonts/RemixIcons/fonts/remixicon.css";
+// @import "../assets/fonts/tabler-icons/webfont/tabler-icons.css";

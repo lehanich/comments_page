@@ -1,0 +1,46 @@
+@import "../../../../src/prebuild/scss/variables";
+@import "../../../../src/prebuild/scss/mixins";
+
+.root {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgb(var(--color-spinner-rgb));
+  animation: spin 1s linear infinite;
+  border-radius: 9999px;
+  border-width: 3px;
+  border-color: transparent;
+  border-top-color: transparent;
+
+  &__sr_only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  &__wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    &_auth {
+      position: absolute;
+      top: 0;
+      left: 0;
+      
+      @include container-close();
+
+    }
+  }
+
+}

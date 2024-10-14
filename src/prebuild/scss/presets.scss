@@ -1,0 +1,104 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+@each $padding-name, $padding-value in $padding {
+  .p-#{$padding-name} {
+    padding: $padding-value;
+  }
+}
+
+@each $padding-name, $padding-value in $padding-important {
+  .\!p-#{$padding-name} {
+    padding: $padding-value !important;
+  }
+}
+
+@each $padding-name, $padding-value in $paddingX {
+  .px-#{$padding-name} {
+    padding-left: $padding-value;
+    padding-right: $padding-value;
+  }
+}
+
+@each $padding-name, $padding-value in $paddingY {
+  .py-#{$padding-name} {
+    padding-top: $padding-value;
+    padding-bottom: $padding-value;
+  }
+}
+
+@each $margin-name, $margin-value in $marginX {
+  .mx-#{$margin-name} {
+    margin-left: $margin-value;
+    margin-right: $margin-value;
+  }
+}
+
+@each $margin-name, $margin-value in $marginY {
+  .my-#{$margin-name} {
+    margin-top: $margin-value;
+    margin-bottom: $margin-value;
+  }
+}
+
+@each $bg-name, $bg-value in $bg-gray {
+  .bg-gray-#{$bg-name} {
+    --tw-bg-opacity: 1;
+    background-color: $bg-value;
+  }
+}
+
+@each $border-name, $border-value in $border-gray {
+  .border-gray-#{$border-name} {
+    --tw-border-opacity: 1;
+    border-color: $border-value;
+  }
+}
+
+@each $z-name, $z-value in $z-index {
+  .z-#{$z-name} {
+    z-index: $z-value;
+  }
+}
+
+@each $op-name, $op-value in $bg-opacity {
+  .bg-opacity-#{$op-name} {
+    --tw-bg-opacity: #{$op-value};
+  }
+}
+
+@each $op-name, $op-value in $bg-opacity-dark {
+  .dark .dark\:bg-opacity-#{$op-name} {
+    --tw-bg-opacity: #{$op-value};
+  }
+}
+
+@each $width-name, $width-value in $width {
+  .w-#{$width-name} {
+    width: #{$width-value};
+  }
+}
+
+@each $height-name, $height-value in $height {
+  .h-#{$height-name} {
+    height: #{$height-value};
+  }
+}
+
+@each $overflow-name, $overflow-value in $overflow {
+  .overflow-#{$overflow-name} {
+    overflow: #{$overflow-value};
+  }
+}
+
+@each $overflow-name, $overflow-value in $overflow-x {
+  .overflow-x-#{$overflow-name} {
+    overflow-x: #{$overflow-value};
+  }
+}
+
+@each $overflow-name, $overflow-value in $overflow-y {
+  .overflow-y-#{$overflow-name} {
+    overflow-y: #{$overflow-value};
+  }
+}

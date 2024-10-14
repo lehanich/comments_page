@@ -1,0 +1,351 @@
+.root {
+  min-width: 4rem;
+  
+  &__hiddenAccessible {
+    clip: rect(0 0 0 0)!important;
+    border: 0!important;
+    -webkit-clip-path: inset(50%)!important;
+    clip-path: inset(50%)!important;
+    overflow: hidden!important;
+    padding: 0!important;
+    position: absolute!important;
+    white-space: nowrap!important;
+    width: 1px!important;
+  }
+
+  &__container.single.input-active &__control, &__container.single.input-active &__control input {
+    cursor: text;
+  }
+  &__container.single &__control, &__container.single &__control input {
+      cursor: pointer;
+  }
+  .has-items &__control>input {
+      margin: 0 4px!important;
+  }
+
+  &__control, &__control input, &__dropdown {
+    font-smoothing: inherit;
+    color: #303030;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  &__container {
+    display: flex;
+    min-height: 36px;
+    position: relative;
+  }
+  /*mode*/
+  &.single &__control {
+    cursor: pointer;
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+    background-image: none !important;
+    --tw-border-opacity: 1 !important;
+    border-color: rgb(226 232 240 / var(--tw-border-opacity)) !important;
+    
+  }
+  & .active &__control {
+    cursor: text;
+    background: #fff;
+  }
+
+  & .input_hidden input {
+    left: -10000px;
+    opacity: 0;
+    position: absolute;
+  }
+
+  &__control {
+    border-radius: 0.5rem !important;
+    --tw-border-opacity: 1 !important;
+    border-color: rgb(226 232 240 / var(--tw-border-opacity)) !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    --tw-shadow: 0 0 #0000 !important;
+    --tw-shadow-colored: 0 0 #0000 !important;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+
+    font-smoothing: inherit;
+    color: #303030;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 18px;
+
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 8px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    &>* {
+      display: inline-block;
+      vertical-align: baseline;
+    }
+
+    input {
+      background: none!important;
+      border: 0!important;
+      box-shadow: none!important;
+      display: inline-block!important;
+      flex: 1 1 auto;
+      line-height: inherit!important;
+      margin: 0!important;
+      max-height: none!important;
+      max-width: 100%!important;
+      min-height: 0!important;
+      min-width: 7rem;
+      padding: 0!important;
+      text-indent: 0!important;
+      -webkit-user-select: auto!important;
+      -moz-user-select: auto!important;
+      -ms-user-select: auto!important;
+      user-select: auto!important;
+    }
+    &:after {
+      border-color: grey transparent transparent;
+      border-style: solid;
+      border-width: 5px 5px 0;
+      content: " ";
+      display: block;
+      height: 0;
+      margin-top: -3px;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      width: 0;
+    }
+    &.active:after{
+      border-color: transparent transparent grey;
+      border-width: 0 5px 5px;
+      margin-top: -4px;
+    }
+  }
+
+  &__dropdown {
+    overflow: hidden !important;
+    border-radius: 0.5rem !important;
+    border-top-width: 1px !important;
+    border-style: solid !important;
+    --tw-border-opacity: 1 !important;
+    border-color: rgb(226 232 240 / var(--tw-border-opacity)) !important;
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+
+    font-smoothing: inherit;
+    color: #303030;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 18px;
+
+    background: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 0 0 3px 3px;
+    border-top: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    box-sizing: border-box;
+    left: 0;
+    margin: 0.25rem 0 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 10;
+
+    &_content {
+      overflow-scrolling: touch;
+      max-height: 200px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+  }
+  &__dropdown {
+    &.single {
+      border-color: #b8b8b8;
+      --tw-border-opacity: 1 !important;
+      border-color: rgb(226 232 240 / var(--tw-border-opacity)) !important;
+    }
+    
+  }
+
+  &__option {
+    padding: 0.75rem !important;
+    cursor: inherit;
+    opacity: .5;
+    cursor: pointer;
+    opacity: 1;
+
+    &.active, &:hover {
+      --tw-bg-opacity: 1 !important;
+      background-color: rgb(248 250 252 / var(--tw-bg-opacity)) !important;
+      background-color: #f5fafd;
+      color: #495c68;
+    }
+
+    &.selected {
+
+    }
+  }
+}
+
+.custom--dropdown-container {
+  text-align: left;
+  border: 1px solid #ccc;
+  position: relative;
+  border-radius: 6px;
+  cursor: pointer;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.custom--dropdown-container .dropdown-input {
+  padding: 7px 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  gap: 7px;
+}
+
+.custom--dropdown-container .dropdown-input .dropdown-selected-value.placeholder {
+  color: #82868b;
+}
+
+.custom--dropdown-container .dropdown-tool svg {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom--dropdown-container .dropdown-tool svg.translate {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.custom--dropdown-container .dropdown-menu {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 5px;
+  position: absolute;
+  -webkit-transform: translateY(6px);
+  -ms-transform: translateY(6px);
+  transform: translateY(6px);
+  border: 1px solid #dbdbdb;
+  border-radius: 6px;
+  overflow: auto;
+  background-color: #fff;
+  z-index: 99;
+  max-height: 312px;
+  min-height: 50px;
+}
+
+.custom--dropdown-container .dropdown-menu::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom--dropdown-container .dropdown-menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom--dropdown-container .dropdown-menu::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.custom--dropdown-container .dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.custom--dropdown-container .dropdown-menu.alignment--left {
+  left: 0;
+}
+
+.custom--dropdown-container .dropdown-menu.alignment--right {
+  right: 0;
+}
+
+.custom--dropdown-container .dropdown-item {
+  padding: 7px 10px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.35s ease;
+  transition: background-color 0.35s ease;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.custom--dropdown-container .dropdown-item:hover {
+  background-color: rgba(130, 134, 139, 0.05);
+  color: #ff7300;
+}
+
+.custom--dropdown-container .dropdown-item.selected {
+  background-color: rgba(255, 115, 0, 0.075);
+  color: #ff7300;
+  font-weight: 600;
+}
+
+.custom--dropdown-container .search-box {
+  padding: 5px;
+}
+
+.custom--dropdown-container .search-box input {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.custom--dropdown-container .dropdown-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.custom--dropdown-container .dropdown-tag-item {
+  background-color: #ff7300;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 4px;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.custom--dropdown-container .dropdown-tag-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 5px;
+}

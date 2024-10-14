@@ -1,0 +1,16 @@
+import { useSearchParams } from "react-router-dom";
+import { useCallback } from "react";
+
+  const searchParams = useSearchParams()
+ 
+  // Get a new searchParams string by merging the current
+  // searchParams with a provided key/value pair
+  export const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams.toString())
+      params.set(name, value)
+ 
+      return params.toString()
+    },
+    [searchParams]
+  )

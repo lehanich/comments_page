@@ -1,0 +1,57 @@
+.root {
+  position: relative;
+  display: block;
+  &::before {
+    content: "";
+    position: absolute;
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    // background-image: url("../../assets/imgs/bg-page.jpg"); // var(--bg-base1); // url("../assets/forest1.png"); // 
+      // background-image: -webkit-image-set(
+      //   var(--bg-webp) 1x,
+      //   var(--bg-png) 1x,
+      //   var(--bg-jpeg) 1x
+      // );
+      // background-image: image-set(
+      //   var(--bg-webp) type("image/webp") 1x,
+      //   var(--bg-png) type("image/png") 1x,
+      //   var(--bg-jpeg) type("image/jpeg") 1x
+      // );
+    
+      background-size: cover;
+      /* old */
+      background-repeat: round;
+  
+      /* new */
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+
+  &__sm::before {
+    width: 8px;
+    height: 8px;
+  }
+  
+  &__md::before {
+    width: 18px;
+    height: 18px;
+  }
+  &__lg::before {
+    width: 36px;
+    height: 36px;
+  }
+
+}
+
+.like::before {
+  background-image: url("../../prebuild/assets/icons/like.svg");
+  top: -15px;
+  left: -7px;
+}
+
+.messages::before {
+  background-image: url("../../prebuild/assets/icons/messages.svg");
+  top: -15px;
+  left: -7px;
+}

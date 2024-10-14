@@ -1,0 +1,14 @@
+@import "../../../prebuild/scss/variables";
+@import "../../../prebuild/scss/mixins";
+
+.root {
+  border: 1px solid rgb(var(--block-border-color));
+  background-color: rgb(var(--block-background-color));
+  border-radius: 0.8rem;
+  margin-bottom: 40px;
+  padding: 15px;
+
+  &__header {
+
+  }
+}

@@ -1,0 +1,33 @@
+.root {
+  display: block;
+
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  width: 100%;
+
+  &__border {
+    --tw-border-opacity: 1;
+    border-color: rgb(226 232 240 / var(--tw-border-opacity));
+
+    border-radius: 0.25rem;
+  }
+
+  &__input_noborder {
+    outline: none !important;
+    border-width: 0px;
+    margin: 0px;
+  }
+}
+
+// input::-webkit-input-placeholder {
+//   // color: var(--color-grey-2);
+// }
+// input:-internal-autofill-selected {
+//   background-color: transparent;
+// }

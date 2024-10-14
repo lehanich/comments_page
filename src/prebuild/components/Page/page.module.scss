@@ -1,0 +1,20 @@
+@import "../../../../src/prebuild/scss/variables";
+@import "../../../../src/prebuild/scss/mixins";
+
+.root {
+
+  &__header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+
+    @include breakpoint("md") {
+      display: flex;
+
+      justify-content: center;
+    }
+  }
+  &__subHeader {
+    color: #CBACF9;
+  }
+}
